@@ -72,7 +72,8 @@ h1.company-name {
   padding: 2em;
 }
 .header__text p {
-  font-weight: 200;
+  font-weight: 400;
+  color: gold;
 }
 .header__img {
   grid-row: 1/2;
@@ -266,15 +267,13 @@ h1.company-name {
 }
 
 .gall .gallery-mobile {
+  padding: 6em 0 6em;
   background-color: black;
 }
 .gall .gallery-mobile .carousel-wrapper {
-  width: 416px;
-  height: 265px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
   border-radius: 6px;
   margin: 100px auto 20px;
 }
@@ -286,8 +285,8 @@ h1.company-name {
 }
 .gall .gallery-mobile .carousel {
   display: flex;
-  width: 1200px;
-  animation: sliding 12s infinite;
+  width: 2400px;
+  animation: sliding 24s infinite;
 }
 .gall .gallery-mobile .carousel div {
   width: 400px;
@@ -307,21 +306,48 @@ h1.company-name {
 .gall .gallery-mobile .carousel .image-three {
   background-image: url("../img/gallery/10.jpg");
 }
+.gall .gallery-mobile .carousel .image-four {
+  background-image: url("../img/gallery/14.jpg");
+}
+.gall .gallery-mobile .carousel .image-five {
+  background-image: url("../img/gallery/9.jpg");
+}
+.gall .gallery-mobile .carousel .image-six {
+  background-image: url("../img/gallery/10.jpg");
+}
 @keyframes sliding {
-  30% {
+  12% {
     transform: translateX(0);
   }
-  35% {
+  16% {
     transform: translateX(-400px);
   }
-  65% {
+  28% {
     transform: translateX(-400px);
   }
-  70% {
+  32% {
     transform: translateX(-800px);
+  }
+  44% {
+    transform: translateX(-800px);
+  }
+  48% {
+    transform: translateX(-1200px);
+  }
+  60% {
+    transform: translateX(-1200px);
+  }
+  64% {
+    transform: translateX(-1600px);
+  }
+  76% {
+    transform: translateX(-1600px);
+  }
+  80% {
+    transform: translateX(-2000px);
   }
   98% {
-    transform: translateX(-800px);
+    transform: translateX(-2000px);
   }
   100% {
     transform: translateX(0);
@@ -330,34 +356,52 @@ h1.company-name {
 @media screen and (max-width: 768px) {
   .gall .gallery-mobile .carousel-wrapper {
     width: 312px;
-    height: 210px;
+    height: 265px;
   }
   .gall .gallery-mobile .carousel-container {
-    width: 240px;
-    height: 150px;
+    width: 300px;
+    height: 250px;
   }
   .gall .gallery-mobile .carousel {
-    width: 720px;
+    width: 1800px;
   }
   .gall .gallery-mobile .carousel > div {
-    width: 240px;
-    height: 150px;
+    width: 300px;
+    height: 250px;
   }
   @keyframes sliding {
-    30% {
+    12% {
       transform: translateX(0);
     }
-    35% {
-      transform: translateX(-240px);
+    16% {
+      transform: translateX(-300px);
     }
-    65% {
-      transform: translateX(-240px);
+    28% {
+      transform: translateX(-300px);
     }
-    70% {
-      transform: translateX(-480px);
+    32% {
+      transform: translateX(-600px);
+    }
+    44% {
+      transform: translateX(-600px);
+    }
+    48% {
+      transform: translateX(-900px);
+    }
+    60% {
+      transform: translateX(-900px);
+    }
+    64% {
+      transform: translateX(-1200px);
+    }
+    76% {
+      transform: translateX(-1200px);
+    }
+    80% {
+      transform: translateX(-1500px);
     }
     98% {
-      transform: translateX(-480px);
+      transform: translateX(-1500px);
     }
     100% {
       transform: translateX(0);
@@ -469,6 +513,8 @@ h1.company-name {
   border-top: 1px solid black;
   text-align: center;
   font-family: "Dancing Script", cursive;
+  color: white;
+  background-color: black;
 }
 
 @media (min-width: 576px) {
@@ -567,6 +613,7 @@ h1.company-name {
   }
   .header__text p {
     font-size: 1.8rem;
+    font-weight: 400;
   }
   .header__img {
     grid-row: 1/4;
@@ -576,6 +623,7 @@ h1.company-name {
 @media (min-width: 1200px) {
   .header__text p {
     font-size: 2.2rem;
+    font-weight: 400;
   }
 }
 @keyframes pulse {

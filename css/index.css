@@ -265,8 +265,104 @@ h1.company-name {
   font-size: 1.4rem;
 }
 
-.gall {
-  display: none;
+.gall .gallery-mobile {
+  background-color: black;
+}
+.gall .gallery-mobile .carousel-wrapper {
+  width: 416px;
+  height: 265px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+  border-radius: 6px;
+  margin: 100px auto 20px;
+}
+.gall .gallery-mobile .carousel-container {
+  width: 400px;
+  height: 250px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.gall .gallery-mobile .carousel {
+  display: flex;
+  width: 1200px;
+  animation: sliding 12s infinite;
+}
+.gall .gallery-mobile .carousel div {
+  width: 400px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+.gall .gallery-mobile .carousel:hover {
+  animation-play-state: paused;
+}
+.gall .gallery-mobile .carousel .image-one {
+  background-image: url("../img/gallery/5.jpg");
+}
+.gall .gallery-mobile .carousel .image-two {
+  background-image: url("../img/gallery/6.jpg");
+}
+.gall .gallery-mobile .carousel .image-three {
+  background-image: url("../img/gallery/10.jpg");
+}
+@keyframes sliding {
+  30% {
+    transform: translateX(0);
+  }
+  35% {
+    transform: translateX(-400px);
+  }
+  65% {
+    transform: translateX(-400px);
+  }
+  70% {
+    transform: translateX(-800px);
+  }
+  98% {
+    transform: translateX(-800px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@media screen and (max-width: 768px) {
+  .gall .gallery-mobile .carousel-wrapper {
+    width: 312px;
+    height: 210px;
+  }
+  .gall .gallery-mobile .carousel-container {
+    width: 240px;
+    height: 150px;
+  }
+  .gall .gallery-mobile .carousel {
+    width: 720px;
+  }
+  .gall .gallery-mobile .carousel > div {
+    width: 240px;
+    height: 150px;
+  }
+  @keyframes sliding {
+    30% {
+      transform: translateX(0);
+    }
+    35% {
+      transform: translateX(-240px);
+    }
+    65% {
+      transform: translateX(-240px);
+    }
+    70% {
+      transform: translateX(-480px);
+    }
+    98% {
+      transform: translateX(-480px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 }
 .gall .gallery {
   min-height: 100vh;
@@ -302,6 +398,30 @@ h1.company-name {
   background: url("../img/gallery/10.jpg") no-repeat 50%/cover;
 }
 .gall .gallery .container > div:nth-of-type(4) {
+  background: url("../img/gallery/14.jpg") no-repeat 50%/cover;
+}
+.gall .gallery .container > div:nth-of-type(5) {
+  background: url("../img/gallery/14.jpg") no-repeat 50%/cover;
+}
+.gall .gallery .container > div:nth-of-type(6) {
+  background: url("../img/gallery/14.jpg") no-repeat 50%/cover;
+}
+.gall .gallery .container > div:nth-of-type(7) {
+  background: url("../img/gallery/14.jpg") no-repeat 50%/cover;
+}
+.gall .gallery .container > div:nth-of-type(8) {
+  background: url("../img/gallery/14.jpg") no-repeat 50%/cover;
+}
+.gall .gallery .container > div:nth-of-type(9) {
+  background: url("../img/gallery/14.jpg") no-repeat 50%/cover;
+}
+.gall .gallery .container > div:nth-of-type(10) {
+  background: url("../img/gallery/14.jpg") no-repeat 50%/cover;
+}
+.gall .gallery .container > div:nth-of-type(11) {
+  background: url("../img/gallery/14.jpg") no-repeat 50%/cover;
+}
+.gall .gallery .container > div:nth-of-type(12) {
   background: url("../img/gallery/14.jpg") no-repeat 50%/cover;
 }
 .gall .gallery .container > div .content {
@@ -426,9 +546,6 @@ h1.company-name {
   .plans__item-name {
     margin-top: 0;
     margin-bottom: 0;
-  }
-  .gall {
-    display: block;
   }
 }
 @media (min-width: 992px) {

@@ -293,9 +293,119 @@ h1.company-name {
 	}
 }
 .gall {
-	display: none;
+	.gallery-mobile {
+		$size-width: 400px;
+		$size-height: 250px;
+		background-color: black;
+		.carousel-wrapper {
+			width: $size-width * 1.04;
+			height: $size-height * 1.06;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+			border-radius: 6px;
+			margin: 100px auto 20px;
+		}
+
+		.carousel-container {
+			width: $size-width;
+			height: $size-height;
+			overflow: hidden;
+			margin: 0 auto;
+		}
+
+		.carousel {
+			display: flex;
+			width: $size-width * 3;
+			animation: sliding 12s infinite;
+			div {
+				width: $size-width;
+				height: $size-height;
+				background-size: cover;
+				background-position: center;
+			}
+			&:hover {
+				animation-play-state: paused;
+			}
+			.image-one {
+				background-image: url('../img/gallery/5.jpg');
+			}
+			.image-two {
+				background-image: url('../img/gallery/6.jpg');
+			}
+			.image-three {
+				background-image: url('../img/gallery/10.jpg');
+			}
+		}
+
+		@keyframes sliding {
+			30% {
+				transform: translateX(0);
+			}
+			35% {
+				transform: translateX(-$size-width);
+			}
+			65% {
+				transform: translateX(-$size-width);
+			}
+			70% {
+				transform: translateX(-$size-width * 2);
+			}
+			98% {
+				transform: translateX(-$size-width * 2);
+			}
+			100% {
+				transform: translateX(0);
+			}
+		}
+
+		@media screen and (max-width: 768px) {
+			$size-width: 240px;
+			$size-height: 150px;
+			.carousel-wrapper {
+				width: $size-width * 1.3;
+				height: $size-height * 1.4;
+			}
+
+			.carousel-container {
+				width: $size-width;
+				height: $size-height;
+			}
+
+			.carousel {
+				width: $size-width * 3;
+				> div {
+					width: $size-width;
+					height: $size-height;
+				}
+			}
+
+			@keyframes sliding {
+				30% {
+					transform: translateX(0);
+				}
+				35% {
+					transform: translateX(-$size-width);
+				}
+				65% {
+					transform: translateX(-$size-width);
+				}
+				70% {
+					transform: translateX(-$size-width * 2);
+				}
+				98% {
+					transform: translateX(-$size-width * 2);
+				}
+				100% {
+					transform: translateX(0);
+				}
+			}
+		}
+	}
+	//dodać klase display:block z nth-child i operować na breakpointach w JS
+	// display: none;
 	.gallery {
-		
 		min-height: 100vh;
 		display: grid;
 		place-items: center;
@@ -328,6 +438,30 @@ h1.company-name {
 					background: url('../img/gallery/10.jpg') no-repeat 50% / cover;
 				}
 				&:nth-of-type(4) {
+					background: url('../img/gallery/14.jpg') no-repeat 50% / cover;
+				}
+				&:nth-of-type(5) {
+					background: url('../img/gallery/14.jpg') no-repeat 50% / cover;
+				}
+				&:nth-of-type(6) {
+					background: url('../img/gallery/14.jpg') no-repeat 50% / cover;
+				}
+				&:nth-of-type(7) {
+					background: url('../img/gallery/14.jpg') no-repeat 50% / cover;
+				}
+				&:nth-of-type(8) {
+					background: url('../img/gallery/14.jpg') no-repeat 50% / cover;
+				}
+				&:nth-of-type(9) {
+					background: url('../img/gallery/14.jpg') no-repeat 50% / cover;
+				}
+				&:nth-of-type(10) {
+					background: url('../img/gallery/14.jpg') no-repeat 50% / cover;
+				}
+				&:nth-of-type(11) {
+					background: url('../img/gallery/14.jpg') no-repeat 50% / cover;
+				}
+				&:nth-of-type(12) {
 					background: url('../img/gallery/14.jpg') no-repeat 50% / cover;
 				}
 

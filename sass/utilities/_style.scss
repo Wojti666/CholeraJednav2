@@ -20,6 +20,10 @@ body {
 	// color:#ea30d3;
 	// background-color: rgb(250, 189, 200);
 }
+.sticky-body {
+	overflow: hidden;
+}
+
 h1.company-name {
 	margin-bottom: 0.5em;
 	font-size: 3rem;
@@ -60,6 +64,56 @@ h1.company-name {
 	}
 	span {
 		font-weight: 900;
+	}
+}
+.hamburger {
+	position: absolute;
+	top: 3em;
+	left: 1em;
+	transform: translateY(-50%);
+	z-index: 500;
+	&-inner,
+	&-inner::before,
+	&-inner::after {
+		background-color: white;
+		z-index: 500;
+	}
+}
+.nav {
+	&-mobile {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background-color: white;
+		transform: translateX(-102%);
+		transition: transform 0.3s;
+		z-index: 10;
+		&--active {
+			transform: translateX(0);
+		}
+	}
+	&-desktop {
+		display: none;
+	}
+	&__link {
+		position: relative;
+		display: inline-block;
+		margin: 0.5em;
+		padding: 0.5em;
+		font-size: 2.3rem;
+		color: black;
+		text-transform: uppercase;
+		text-decoration: none;
+		transition: color 0.3s;
+		&:hover {
+			color: gold;
+		}
 	}
 }
 .header {
@@ -395,10 +449,72 @@ h1.company-name {
 			}
 		}
 
-		@media screen and (max-width: 768px) {
+		@media screen and (max-width: 575px) {
 			$size-width: 300px;
 
 			$size-height: 250px;
+
+			.carousel-wrapper {
+				width: $size-width * 1.04;
+				height: $size-height * 1.06;
+			}
+
+			.carousel-container {
+				width: $size-width;
+				height: $size-height;
+			}
+
+			.carousel {
+				width: $size-width * 6;
+				> div {
+					width: $size-width;
+					height: $size-height;
+				}
+			}
+
+			@keyframes sliding {
+				12% {
+					transform: translateX(0);
+				}
+				16% {
+					transform: translateX(-$size-width);
+				}
+				28% {
+					transform: translateX(-$size-width);
+				}
+				32% {
+					transform: translateX(-$size-width * 2);
+				}
+				44% {
+					transform: translateX(-$size-width * 2);
+				}
+				48% {
+					transform: translateX(-$size-width * 3);
+				}
+				60% {
+					transform: translateX(-$size-width * 3);
+				}
+				64% {
+					transform: translateX(-$size-width * 4);
+				}
+				76% {
+					transform: translateX(-$size-width * 4);
+				}
+				80% {
+					transform: translateX(-$size-width * 5);
+				}
+				98% {
+					transform: translateX(-$size-width * 5);
+				}
+				100% {
+					transform: translateX(0);
+				}
+			}
+		}
+		@media screen and (min-width: 576px) {
+			$size-width: 520px;
+
+			$size-height: 400px;
 
 			.carousel-wrapper {
 				width: $size-width * 1.04;
@@ -544,7 +660,7 @@ h1.company-name {
 				}
 
 				&:hover {
-					flex: 0 0 250px;
+					flex: 0 0 550px;
 					box-shadow: 1px 3px 15px #7645d8;
 					transform: translatey(-30px);
 				}

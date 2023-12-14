@@ -1,4 +1,8 @@
 @media (min-width: 576px) {
+	.cards {
+		font-size: 1.4rem;
+	}
+
 	.info {
 		grid-template-areas:
 			'title box'
@@ -39,7 +43,6 @@
 				animation: rotate-left 160s infinite linear;
 			}
 			&--four {
-                
 				top: 55%;
 				left: -10%;
 				width: 60%;

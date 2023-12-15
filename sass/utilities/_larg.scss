@@ -14,10 +14,11 @@
 		padding: 1em;
 		&-desktop {
 			display: block;
+			background-color: black;
 			border-bottom: 1px solid black;
 		}
 		&__link {
-			color: black;
+			color: white;
 			&::before {
 				position: absolute;
 				top: 0;

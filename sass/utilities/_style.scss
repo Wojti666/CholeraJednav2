@@ -91,7 +91,8 @@ h1.company-name {
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		background-color: white;
+		background-color: black;
+
 		transform: translateX(-102%);
 		transition: transform 0.3s;
 		z-index: 10;
@@ -106,14 +107,19 @@ h1.company-name {
 		position: relative;
 		display: inline-block;
 		margin: 0.5em;
-		padding: 0.5em;
+		padding: 0.5em 1em;
 		font-size: 2.3rem;
-		color: black;
+		color: white;
 		text-transform: uppercase;
 		text-decoration: none;
-		transition: color 0.3s;
+		// transition: color 0.3s;
+		transition: background-image 0.3s;
 		&:hover {
-			color: gold;
+			color: black;
+			background-image: url('../img/flow.png');
+			background-size: cover;
+			background-position: center;
+			border-radius: 20px;
 		}
 	}
 }

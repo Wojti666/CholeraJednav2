@@ -1,4 +1,7 @@
 @media (min-width: 992px) {
+	.html {
+		scroll-padding-top: 74px;
+	}
 	.section-title {
 		font-size: 4.8rem;
 		&::before {
@@ -9,15 +12,21 @@
 		font-size: 6rem;
 	}
 	.nav {
-		grid-column: 1/2;
+		width: 100%;
+		position: fixed;
+		grid-column: 1/3;
 		grid-row: 1/2;
 		padding: 1em;
+		z-index: 1000;
 		&-desktop {
-			display: block;
-			background-color: black;
+			// display: block;
+			display: flex;
+			background-color: rgba(0, 0, 0, 0.86);
 			border-bottom: 1px solid black;
 		}
+
 		&__link {
+			display: block;
 			color: white;
 			&::before {
 				position: absolute;
@@ -27,11 +36,21 @@
 				width: 100%;
 				height: 100%;
 				border: 1px solid gold;
+				border-radius: 20px;
 				opacity: 0;
 			}
 			&:hover::before {
 				animation: pulse 1s;
 			}
+		}
+		.logo {
+			font-family: 'Dancing Script', cursive;
+			margin: 0.5em;
+			margin-left: auto;
+			padding: 0.5em 1em;
+			font-size: 2.3rem;
+			text-decoration: none;
+			color: white;
 		}
 	}
 	.hamburger {
@@ -51,9 +70,47 @@
 			grid-row: 1/4;
 			grid-column: 2/3;
 		}
+		&__arrow {
+			display: block;
+			position: absolute;
+			// bottom: 3em;
+			// left: 48%;
+			bottom: 45%;
+			left: 75%;
+			// bottom: 15%;
+			// left: 25%;
+			padding: 2em;
+			transform: translateX(-50%);
+			border: 1px solid gold;
+			border-radius: 50%;
+			&::before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: '';
+				width: 100%;
+				height: 100%;
+				border: 1px solid gold;
+				border-radius: 50%;
+				animation: pulse 2s infinite;
+			}
+		}
+		&__arrow-icon {
+			width: 50px;
+		}
 	}
 	.cards {
 		font-size: 1.6rem;
+	}
+	.contact {
+		.contact-us .contact-item .contact-head .contact-head-img {
+			width: 130px;
+			height: 130px;
+			// background-size: cover;
+			// background-position: center;
+			// border-radius: 50%;
+		}
+		
 	}
 	.footer {
 		font-size: 2.2rem;

@@ -57,7 +57,7 @@ h1.company-name {
 }
 
 .hamburger {
-  position: absolute;
+  position: fixed;
   top: 3em;
   left: 1em;
   transform: translateY(-50%);
@@ -69,7 +69,7 @@ h1.company-name {
 }
 
 .nav-mobile {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -102,7 +102,7 @@ h1.company-name {
 }
 .nav__link:hover {
   color: black;
-  background-image: url("../img/flow.png");
+  background-image: url("../img/bg1p.png");
   background-size: cover;
   background-position: center;
   border-radius: 20px;
@@ -146,6 +146,9 @@ h1.company-name {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
+}
+.header__arrow {
+  display: none;
 }
 
 .cards {
@@ -212,33 +215,38 @@ h1.company-name {
   grid-column: 1/-1;
 }
 
-.info {
+.info-section {
+  background-image: url("../img/longbg1.png");
+  background-position: center;
+  background-size: cover;
+}
+.info-section .info {
   position: relative;
   display: grid;
   grid-template-areas: "title title title" "box box box" "box box box";
   padding: 6em 2em;
 }
-.info__title {
+.info-section .info__title {
   grid-area: title;
 }
-.info__boxes {
+.info-section .info__boxes {
   grid-area: box;
 }
-.info__box-img {
+.info-section .info__box-img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.info__box-title {
+.info-section .info__box-title {
   margin: 0.3em 0;
   font-size: 3.6rem;
   color: black;
   font-weight: 400;
 }
-.info__box-text {
+.info-section .info__box-text {
   margin-bottom: 0.5em;
 }
-.info__box-link {
+.info-section .info__box-link {
   display: block;
   margin-bottom: 2em;
   font-weight: bold;
@@ -247,10 +255,10 @@ h1.company-name {
   text-align: right;
   transition: color 0.3s;
 }
-.info__box-link:hover {
+.info-section .info__box-link:hover {
   color: orange;
 }
-.info__bg-icon {
+.info-section .info__bg-icon {
   display: none;
 }
 
@@ -289,6 +297,9 @@ h1.company-name {
 .newsletter {
   padding: 6em 2em;
   background: white;
+  background-image: url("../img/flowers.png");
+  background-size: cover;
+  background-position: center;
 }
 .newsletter .wrapper .reviews__box {
   position: relative;
@@ -596,7 +607,7 @@ h1.company-name {
   overflow: hidden;
 }
 .gall .gallery .container > div:nth-of-type(1) {
-  background: url("../img/gallery/5.jpg") no-repeat 80%/cover;
+  background: url("../img/gallery/5.jpg") no-repeat 50%/cover;
 }
 .gall .gallery .container > div:nth-of-type(2) {
   background: url("../img/gallery/6.jpg") no-repeat 50%/cover;
@@ -710,7 +721,25 @@ h1.company-name {
   text-align: center;
 }
 .contact .contact-us .contact-item .social-media .social-link {
+  position: relative;
   font-weight: bold;
+  font-size: 1.8rem;
+  border: 1px solid gold;
+  border-radius: 20px;
+}
+.contact .contact-us .contact-item .social-media .social-link::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 1px solid gold;
+  border-radius: 20px;
+  animation: pulse 2s infinite;
+}
+.contact .contact-us p {
+  padding: 0.3em;
 }
 
 .footer {
@@ -738,12 +767,11 @@ h1.company-name {
     padding: 0 1em;
   }
   .info__box-img, .info__box-text {
-    max-width: 500px;
+    max-height: 200px;
   }
   .info__bg-icon {
     position: absolute;
     display: block;
-    opacity: 0.07;
     z-index: -5;
   }
   .info__bg-icon--one {
@@ -764,10 +792,8 @@ h1.company-name {
     animation: rotate-left 160s infinite linear;
   }
   .info__bg-icon--four {
-    top: 55%;
-    left: -10%;
-    width: 60%;
-    animation: rotate-right 140s infinite linear;
+    -o-object-fit: fill;
+       object-fit: fill;
   }
 }
 @media (min-width: 768px) {
@@ -829,6 +855,9 @@ h1.company-name {
   }
 }
 @media (min-width: 992px) {
+  .html {
+    scroll-padding-top: 74px;
+  }
   .section-title {
     font-size: 4.8rem;
   }
@@ -839,16 +868,20 @@ h1.company-name {
     font-size: 6rem;
   }
   .nav {
-    grid-column: 1/2;
+    width: 100%;
+    position: fixed;
+    grid-column: 1/3;
     grid-row: 1/2;
     padding: 1em;
+    z-index: 1000;
   }
   .nav-desktop {
-    display: block;
-    background-color: black;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.86);
     border-bottom: 1px solid black;
   }
   .nav__link {
+    display: block;
     color: white;
   }
   .nav__link::before {
@@ -859,10 +892,20 @@ h1.company-name {
     width: 100%;
     height: 100%;
     border: 1px solid gold;
+    border-radius: 20px;
     opacity: 0;
   }
   .nav__link:hover::before {
     animation: pulse 1s;
+  }
+  .nav .logo {
+    font-family: "Dancing Script", cursive;
+    margin: 0.5em;
+    margin-left: auto;
+    padding: 0.5em 1em;
+    font-size: 2.3rem;
+    text-decoration: none;
+    color: white;
   }
   .hamburger {
     display: none;
@@ -882,8 +925,36 @@ h1.company-name {
     grid-row: 1/4;
     grid-column: 2/3;
   }
+  .header__arrow {
+    display: block;
+    position: absolute;
+    bottom: 45%;
+    left: 75%;
+    padding: 2em;
+    transform: translateX(-50%);
+    border: 1px solid gold;
+    border-radius: 50%;
+  }
+  .header__arrow::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 1px solid gold;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  .header__arrow-icon {
+    width: 50px;
+  }
   .cards {
     font-size: 1.6rem;
+  }
+  .contact .contact-us .contact-item .contact-head .contact-head-img {
+    width: 130px;
+    height: 130px;
   }
   .footer {
     font-size: 2.2rem;

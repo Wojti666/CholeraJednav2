@@ -18,12 +18,13 @@
 		}
 		&__box-img,
 		&__box-text {
-			max-width: 500px;
+			// max-width: 500px;
+			max-height: 200px;
 		}
 		&__bg-icon {
 			position: absolute;
 			display: block;
-			opacity: 0.07;
+			// opacity: 0.07;
 			z-index: -5;
 			&--one {
 				top: 16%;
@@ -43,10 +44,13 @@
 				animation: rotate-left 160s infinite linear;
 			}
 			&--four {
-				top: 55%;
-				left: -10%;
-				width: 60%;
-				animation: rotate-right 140s infinite linear;
+				// top: 55%;
+				// left: -10%;
+				// width: 60%;
+				// height: 100%;
+				// animation: rotate-right 140s infinite linear;
+
+				object-fit: fill;
 			}
 		}
 	}

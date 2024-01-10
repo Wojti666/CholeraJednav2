@@ -123,7 +123,7 @@ h1.company-name {
 		transition: background-image 0.3s;
 		&:hover {
 			color: black;
-			background-image: url('../img/bg1p.png');
+			background-image: url('/dist/img/bg1p.png');
 			background-size: cover;
 			background-position: center;
 			border-radius: 20px;
@@ -151,7 +151,7 @@ h1.company-name {
 	position: relative;
 	overflow: hidden;
 	&__text {
-		background-image: url(../img/flow.png);
+		background-image: url('/dist/img/flow.png');
 		background-size: cover;
 		background-position: center;
 		display: grid;
@@ -174,7 +174,7 @@ h1.company-name {
 		position: relative;
 		width: 100%;
 		height: 100%;
-		background-image: url('../img/makeup.jpg');
+		background-image: url('/dist/img/makeup.jpg');
 		background-size: cover;
 		background-position: center;
 		// filter: sepia();
@@ -204,7 +204,7 @@ h1.company-name {
 		padding: 6em 2em;
 	}
 	&__card {
-		background-image: url('../img/flowers.png');
+		background-image: url('/dist/img/flowers.png');
 		background-size: cover;
 		background-position: center;
 		position: relative;
@@ -220,7 +220,7 @@ h1.company-name {
 
 		// overflow: hidden;
 		&:hover {
-			background-image: url('../img/transp.png');
+			background-image: url('/dist/img/transp.png');
 			// background-color: black;
 			border: 1px solid gold;
 			z-index: 1;
@@ -261,7 +261,7 @@ h1.company-name {
 }
 .info-section {
 	// background-image: url('../img/longbg1.png');
-	background-image: url('../img/flowers.png');
+	background-image: url('/dist/img/flowers.png');
 	background-position: center;
 	// background-position: left;
 	background-size: cover;
@@ -349,14 +349,14 @@ h1.company-name {
 		border: 1px solid orange;
 		border-radius: 20px;
 		// background-color: black;
-		background-image: url('../img/flowers.png');
+		background-image: url('/dist/img/flowers.png');
 		background-size: cover;
 		background-position: center;
 		// color: white;
 		transition: background-image 0.3s, border 0.3s;
 		// cursor: pointer;
 		&:hover {
-			background-image: url('../img/transp.png');
+			background-image: url('/dist/img/transp.png');
 			// background-color: black;
 			// background-image: url('../img/flowers.png');
 			// background-size: cover;
@@ -381,7 +381,7 @@ h1.company-name {
 .newsletter {
 	padding: 6em 2em;
 	// background: white;
-	background-image: url('../img/flowers.png');
+	background-image: url('/dist/img/flowers.png');
 	background-size: cover;
 	background-position: center;
 	.wrapper {
@@ -520,22 +520,22 @@ h1.company-name {
 				animation-play-state: paused;
 			}
 			.image-one {
-				background-image: url('../img/gallery/5.jpg');
+				background-image: url('dist/img/gallery/5.jpg');
 			}
 			.image-two {
-				background-image: url('../img/gallery/6.jpg');
+				background-image: url('dist/img/gallery/6.jpg');
 			}
 			.image-three {
-				background-image: url('../img/gallery/10.jpg');
+				background-image: url('dist/img/gallery/10.jpg');
 			}
 			.image-four {
-				background-image: url('../img/gallery/14.jpg');
+				background-image: url('dist/img/gallery/14.jpg');
 			}
 			.image-five {
-				background-image: url('../img/gallery/9.jpg');
+				background-image: url('dist/img/gallery/9.jpg');
 			}
 			.image-six {
-				background-image: url('../img/gallery/10.jpg');
+				background-image: url('dist/img/gallery/10.jpg');
 			}
 		}
 
@@ -737,28 +737,28 @@ h1.company-name {
 				overflow: hidden;
 
 				&:nth-of-type(1) {
-					background: url('../img/gallery/5.jpg') no-repeat 50% / cover;
+					background: url('/dist/img/gallery/5.jpg') no-repeat 50% / cover;
 				}
 				&:nth-of-type(2) {
-					background: url('../img/gallery/6.jpg') no-repeat 50% / cover;
+					background: url('/dist/img/gallery/6.jpg') no-repeat 50% / cover;
 				}
 				&:nth-of-type(3) {
-					background: url('../img/gallery/10.jpg') no-repeat 50% / cover;
+					background: url('/dist/img/gallery/10.jpg') no-repeat 50% / cover;
 				}
 				&:nth-of-type(4) {
-					background: url('../img/gallery/14.jpg') no-repeat 50% / cover;
+					background: url('/dist/img/gallery/14.jpg') no-repeat 50% / cover;
 				}
 				&:nth-of-type(5) {
-					background: url('../img/gallery/14.jpg') no-repeat 50% / cover;
+					background: url('/dist/img/gallery/14.jpg') no-repeat 50% / cover;
 				}
 				&:nth-of-type(6) {
-					background: url('../img/gallery/14.jpg') no-repeat 50% / cover;
+					background: url('/dist/img/gallery/14.jpg') no-repeat 50% / cover;
 				}
 				&:nth-of-type(7) {
-					background: url('../img/gallery/14.jpg') no-repeat 50% / cover;
+					background: url('/dist/img/gallery/14.jpg') no-repeat 50% / cover;
 				}
 				&:nth-of-type(8) {
-					background: url('../img/gallery/14.jpg') no-repeat 50% / cover;
+					background: url('/dist/img/gallery/14.jpg') no-repeat 50% / cover;
 				}
 				// &:nth-of-type(9) {
 				// 	background: url('../img/gallery/14.jpg') no-repeat 50% / cover;
@@ -817,7 +817,7 @@ h1.company-name {
 	height: 100%;
 	padding: 3em 2em;
 	// background-image: url('../img/desk.jpg');
-	background-image: url('../img/flow.png');
+	background-image: url('dist/img/flow.png');
 	background-size: cover;
 	background-position: center;
 	.note-msg {

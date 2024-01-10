@@ -71,7 +71,7 @@
 			display: grid;
 			grid-template-columns: repeat(5, 1fr);
 			align-items: center;
-			gap: 3em;
+			// gap: 3em;
 			font-size: 2rem;
 			.note-msg {
 				grid-column: 2/5;

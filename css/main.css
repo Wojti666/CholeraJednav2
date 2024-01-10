@@ -107,6 +107,18 @@ h1.company-name {
   background-position: center;
   border-radius: 20px;
 }
+.nav .logo {
+  position: absolute;
+  top: 0.4em;
+  right: 0;
+  font-family: "Dancing Script", cursive;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  font-size: 2.3rem;
+  color: white;
+  text-decoration: none;
+  text-wrap: right;
+}
 
 .header {
   display: grid;
@@ -232,6 +244,17 @@ h1.company-name {
 .info-section .info__boxes {
   grid-area: box;
 }
+.info-section .info__box {
+  margin-bottom: 6em;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  transition: transform 0.3s;
+}
+.info-section .info__box:hover {
+  transform: scale(1.05);
+}
 .info-section .info__box-img {
   width: 100%;
   -o-object-fit: cover;
@@ -240,10 +263,11 @@ h1.company-name {
 .info-section .info__box-title {
   margin: 0.3em 0;
   font-size: 3.6rem;
-  color: black;
+  color: gold;
   font-weight: 400;
 }
 .info-section .info__box-text {
+  padding: 1em;
   margin-bottom: 0.5em;
 }
 .info-section .info__box-link {
@@ -267,11 +291,13 @@ h1.company-name {
   background-color: black;
 }
 .plans__box {
+  height: 500px;
   margin: 1em 0;
+  margin-bottom: 6em;
   padding: 2em 1em;
   text-align: center;
   border: 1px solid orange;
-  border-radius: 8px;
+  border-radius: 20px;
   background-image: url("../img/flowers.png");
   background-size: cover;
   background-position: center;
@@ -296,16 +322,17 @@ h1.company-name {
 
 .newsletter {
   padding: 6em 2em;
-  background: white;
   background-image: url("../img/flowers.png");
   background-size: cover;
   background-position: center;
 }
 .newsletter .wrapper .reviews__box {
+  background-color: black;
+  color: white;
   position: relative;
   margin: 2em;
   padding: 2em;
-  border-radius: 8px;
+  border-radius: 20px;
   box-shadow: 3px 3px 10px rgba(46, 46, 46, 0.1803921569);
   transition: transform 0.3s;
 }
@@ -599,7 +626,7 @@ h1.company-name {
 }
 .gall .gallery .container > div {
   flex: 0 0 120px;
-  border-radius: 0.5rem;
+  border-radius: 20px;
   transition: 0.5s ease-in-out;
   cursor: pointer;
   box-shadow: 1px 5px 15px #1e0e3e;
@@ -670,6 +697,7 @@ h1.company-name {
   background-position: center;
 }
 .contact .note-msg {
+  margin-bottom: 1.6em;
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
@@ -678,15 +706,23 @@ h1.company-name {
   padding-bottom: 0.8em;
 }
 .contact .contact-us .contact-item {
+  background-color: black;
+  color: white;
+  border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 1.4em;
   text-align: center;
+  margin-bottom: 2em;
+  transition: transform 0.3s;
+}
+.contact .contact-us .contact-item:hover {
+  transform: scale(1.05);
 }
 .contact .contact-us .contact-item .contact-head {
-  padding: 0.6em;
+  padding: 2em 6em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -827,7 +863,6 @@ h1.company-name {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
-    gap: 3em;
     font-size: 2rem;
   }
   .contact .contact-us .note-msg {

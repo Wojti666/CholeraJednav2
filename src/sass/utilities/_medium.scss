@@ -42,8 +42,10 @@
 	.plans {
 		padding: 8em 2em;
 		&__box {
+			// min-height: 300px;
 			display: grid;
-			grid-template-columns: repeat(5, 1fr);
+			// grid-template-columns: repeat(5, 1fr);
+			grid-template-columns: repeat(2, 1fr);
 			align-items: center;
 		}
 		&__item {
@@ -52,6 +54,7 @@
 		&__item-name {
 			margin-top: 0;
 			margin-bottom: 0;
+			padding: 2em;
 		}
 	}
 	// .gall {
@@ -66,32 +69,5 @@
 	// 		}
 	// 	}
 	// }
-	.contact {
-		.contact-us {
-			display: grid;
-			grid-template-columns: repeat(5, 1fr);
-			align-items: center;
-			// gap: 3em;
-			font-size: 2rem;
-			.note-msg {
-				grid-column: 2/5;
-				grid-row: 1/2;
-				p {
-					font-size: 1.6rem;
-				}
-			}
-			.grid1 {
-				grid-column: 2/3;
-				grid-row: 2/3;
-			}
-			.grid2 {
-				grid-column: 4/5;
-				grid-row: 2/3;
-			}
-			.grid3 {
-				grid-column: 2/5;
-				grid-row: 3/4;
-			}
-		}
-	}
+	
 }
